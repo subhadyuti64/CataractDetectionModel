@@ -1,0 +1,28 @@
+# Ignore model files
+*.h5
+*.pth
+*.pkl
+*.pt
+*.joblib
+*.sav
+
+# Ignore model folders if any
+/models/
+checkpoints/
+saved_models/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore environment files
+.env
+.venv/
+venv/
+
+# Ignore Jupyter checkpoints (if applicable)
+.ipynb_checkpoints/
