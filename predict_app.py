@@ -17,11 +17,13 @@ transform = transforms.Compose([
 
 @st.cache_resource
 def load_model():
-    model = models.resnet18(pretrained=False)
-    model.fc = nn.Linear(model.fc.in_features, 2)
-    model.load_state_dict(torch.load("/Users/subhadyutirath/Documents/CataractDetectionModel/resnet18_cataract_model.pkl"))
-    model.eval()
-    return model
+    @st.cache_resource
+    def load_model():
+        model = models.resnet18(pretrained=False)
+        model.fc = nn.Linear(model.fc.in_features, 2)
+        model.load_state_dict(torch.load("resnet18_cataract_model.pkl", map_location=torch.device("cpu")))
+        model.eval()
+        return model
 
 model = load_model()
 
