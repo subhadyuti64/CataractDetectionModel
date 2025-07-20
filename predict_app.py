@@ -25,7 +25,6 @@ def load_model():
 
 model = load_model()
 
-# --- Prediction Function ---
 def predict_image(image: Image.Image):
     image = image.convert("RGB")
     input_tensor = transform(image).unsqueeze(0)
