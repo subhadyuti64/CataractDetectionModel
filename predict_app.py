@@ -6,7 +6,6 @@ from PIL import Image
 
 st.set_page_config(page_title="Cataract Detection", layout="centered")
 
-
 class_names = ["immature", "mature"]
 
 transform = transforms.Compose([
@@ -14,16 +13,13 @@ transform = transforms.Compose([
     transforms.ToTensor(),
 ])
 
-
 @st.cache_resource
 def load_model():
-    @st.cache_resource
-    def load_model():
-        model = models.resnet18(pretrained=False)
-        model.fc = nn.Linear(model.fc.in_features, 2)
-        model.load_state_dict(torch.load("resnet18_cataract_model.pkl", map_location=torch.device("cpu")))
-        model.eval()
-        return model
+    model = models.resnet18(pretrained=False)
+    model.fc = nn.Linear(model.fc.in_features, 2)
+    model.load_state_dict(torch.load("resnet18_cataract_model.pkl", map_location=torch.device("cpu")))
+    model.eval()
+    return model
 
 model = load_model()
 
