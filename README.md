@@ -2,7 +2,7 @@
 
 Deployed Link : https://cataractdetectionmodel-rckgeetx7bjsnuqclr5led.streamlit.app/
 
-This project aims to classify cataract eye images into two categories: **Mature Cataract** and **Immature Cataract** using Convolutional Neural Networks (CNNs). It supports multiple deep learning backbones such as **VGG16**, **ResNet50**, **DenseNet121**, and **InceptionV3**.
+This project aims to classify cataract eye images into two categories: **Mature Cataract** and **Immature Cataract** using Convolutional Neural Networks (CNNs). It supports multiple deep learning backbones such as **VGG16**, **ResNet50**, and **DenseNet121**.
 
 ---
 
