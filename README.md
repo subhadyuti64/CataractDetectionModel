@@ -28,9 +28,9 @@ It contains two classes:
 
 You can experiment with the following pretrained models (with transfer learning):
 
-- VGG16
-- ResNet18
-- DenseNet121
+- VGG16 (Accuracy:100%)
+- ResNet18 (Accuracy:100%)
+- DenseNet121 (Accuracy:100%)
 
 Each model is fine-tuned for binary classification (mature vs immature cataract).
 
